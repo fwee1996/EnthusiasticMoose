@@ -18,6 +18,18 @@ Console.WriteLine(); //create extra line break in between welcome and picture
 MooseSays("H I, I'M  E N T H U S I A S T I C !");
 MooseSays("I really am enthusiastic");
 
+// Ask a question
+bool isTrue = MooseAsks("Is Canada real?");
+//Console.WriteLine(isTrue);
+if (isTrue)
+{
+    MooseSays("Really? It seems very unlikely.");
+}
+else
+{
+    MooseSays("I  K N E W  I T !!!");
+}
+
 //Create a MooseSays() function that displays moose:
 //@ in front of the string to allow for a multi-line string.
 //$ character to the front of the string to enable string interpolation.
@@ -53,3 +65,24 @@ void MooseSays(string message)
     ");
 }
 
+//MooseAsks fn: moose answers yes/no:
+bool MooseAsks(string question)
+{
+    Console.Write($"{question} (Y/N): ");
+    string answer = Console.ReadLine().ToLower();
+
+    while (answer != "y" && answer != "n")
+    {
+        Console.Write($"{question} (Y/N): ");
+        answer = Console.ReadLine().ToLower();
+    }
+
+    if (answer == "y")
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
