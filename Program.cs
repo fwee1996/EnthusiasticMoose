@@ -4,6 +4,10 @@
 
 using System;
 
+Main();
+
+void Main()
+{
 //Console.Write("Welcome to the Enthusiastic Moose Simulator! \n --------------------------------------------");
 
 //Or:
@@ -35,6 +39,7 @@ CanadaQuestion();
 EnthusiasticQuestion();
 LoveCSharpQuestion();
 SecretQuestion();
+}
 
 void CanadaQuestion()
 {
