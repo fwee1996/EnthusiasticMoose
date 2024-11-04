@@ -3,6 +3,7 @@
 
 
 using System;
+using System.Runtime.InteropServices;
 
 Main();
 
@@ -149,3 +150,29 @@ bool MooseAsks(string question)
         return false;
     }
 }
+
+
+//Refactor Q&A Version(Shorter):
+//comment out all the // Ask multiple questions:
+// CanadaQuestion();
+// EnthusiasticQuestion();
+//etc
+
+//comment out all the
+//void CanadaQuestion()
+//{
+//...
+// void EnthusiasticQuestion()
+// {
+//     ...
+
+//At the top, call the new fn:
+//MooseResponse("Is Canada real?","Really? It seems very unlikely.","I  K N E W  I T !!!")   //see void fn below:string question, string yesAnswer, noAnswer thats why MooseResponse("","",""):
+//MooseResponse(other Q&A...
+
+//create a universal fn for all Q&A:
+//void MooseResponse (string question, string yesAnswer, noAnswer){
+//bool is QuestionTrue= MooseAsks(question);
+//string answer=isQuestionTrue? yesAnswer: noAnswer;
+//MooseSays(answer);
+//}
